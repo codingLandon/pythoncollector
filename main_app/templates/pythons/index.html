@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Python List</h1>
+
+  <div class="card">
+    <a href="{/pythons/{{ python.id }}}">
+        <div class="card-content">
+        <span class="card-title">{{ python.name }}</span>
+        <p>Species: {{ python.species }}</p>
+        <p>Morph/Locality: {{ python.morph }}</p>
+        {% if python.age > 0 %}
+            <p>Age: {{ python.age }}</p>
+        {% else %}
+            <p>Age: Baby Snek</p>
+        {% endif %}
+        </div>
+    </a>
+  </div>
+
+{% endblock %}
